@@ -160,4 +160,15 @@ app.delete('/v2/user/:id',(req,res)=>{
 		})
 })
 
+app.get('/error-server', (req, res) => {
+    res.send(500);
+
+});
+app.get('/bad-request', (req, res) => {
+    res.send(400);
+});
+app.get('/created', (req, res) => {
+    res.send(201);
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
